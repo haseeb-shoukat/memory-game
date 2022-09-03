@@ -43,8 +43,8 @@ const Main = () => {
   };
   return (
     <div className="content">
-      {shuffle(items).forEach((item) => (
-        <img src={`./icons/${item}.png`} />
+      {shuffle(items).map((item) => (
+        <img src={require(`./icons/${item}.png`)} />
       ))}
     </div>
   );
