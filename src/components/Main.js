@@ -13,7 +13,7 @@ const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
     { key: uuidv4(), name: "hellboy" },
     { key: uuidv4(), name: "hulk" },
     { key: uuidv4(), name: "ironman" },
-    { key: uuidv4(), name: "moon" },
+    { key: uuidv4(), name: "moon-knight" },
     { key: uuidv4(), name: "naruto" },
     { key: uuidv4(), name: "spawn" },
     { key: uuidv4(), name: "spiderman" },
