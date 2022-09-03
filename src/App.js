@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
 import Main from "./components/Main";
+import React, { useState } from "react";
 
 function App() {
   const { currentScore, setCurrentScore } = useState(0);
