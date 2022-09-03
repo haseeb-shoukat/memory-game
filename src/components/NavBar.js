@@ -2,11 +2,11 @@ import React from "react";
 
 const NavBar = ({ highScore, currentScore }) => {
   return (
-    <div class="nav-bar">
-      <div class="heading">Superhero Memory</div>
-      <div class="score">
-        <div class="best-score">High Score: {highScore}</div>
-        <div class="current-score">Current Score: {currentScore}</div>
+    <div className="nav-bar">
+      <div className="heading">Superhero Memory</div>
+      <div className="score">
+        <div className="best-score">High Score: {highScore}</div>
+        <div className="current-score">Current Score: {currentScore}</div>
       </div>
     </div>
   );
