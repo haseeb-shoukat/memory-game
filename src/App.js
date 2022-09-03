@@ -3,8 +3,8 @@ import Main from "./components/Main";
 import React, { useState } from "react";
 
 function App() {
-  const { currentScore, setCurrentScore } = useState(0);
-  const { highScore, setHighScore } = useState(0);
+  const [currentScore, setCurrentScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
 
   const updateCurrent = (score) => setCurrentScore(score);
   const updateHigh = (score) => setHighScore(score);
