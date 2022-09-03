@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Main = ({ currentScore, updateCurrent }) => {
+const Main = ({ currentScore, updateCurrent, reset }) => {
   let items = [
     "batman",
     "black-panther",
@@ -42,11 +42,15 @@ const Main = ({ currentScore, updateCurrent }) => {
     return arr;
   };
 
+  if (reset) setSelectedItems([]);
+
   const processClick = (name) => {
     const found = selectedItems.find((n) => n === name);
     if (found === undefined) {
       setSelectedItems([...selectedItems, name]);
       updateCurrent(currentScore + 1);
+    } else {
+      updateCurrent(currentScore);
     }
   };
 
