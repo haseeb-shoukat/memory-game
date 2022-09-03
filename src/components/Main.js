@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
+const Main = ({ currentScore, updateCurrent }) => {
   let items = [
     "batman",
     "black-panther",
