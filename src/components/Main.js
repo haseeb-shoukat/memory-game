@@ -41,7 +41,13 @@ const Main = () => {
 
     return arr;
   };
-  return null;
+  return (
+    <div className="content">
+      {shuffle(items).forEach((item) => (
+        <img src={`./icons/${item}.png`} />
+      ))}
+    </div>
+  );
 };
 
 export default Main;
