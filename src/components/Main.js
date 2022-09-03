@@ -1,23 +1,24 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
   let items = [
-    "batman",
-    "black-panther",
-    "daredevil",
-    "deadpool",
-    "dredd",
-    "flash",
-    "groot",
-    "hellboy",
-    "hulk",
-    "ironman",
-    "moon-knight",
-    "naruto",
-    "spawn",
-    "spiderman",
-    "vision",
-    "yoda",
+    { key: uuidv4(), name: "batman" },
+    { key: uuidv4(), name: "black-panther" },
+    { key: uuidv4(), name: "daredevil" },
+    { key: uuidv4(), name: "deadpool" },
+    { key: uuidv4(), name: "dredd" },
+    { key: uuidv4(), name: "flash" },
+    { key: uuidv4(), name: "groot" },
+    { key: uuidv4(), name: "hellboy" },
+    { key: uuidv4(), name: "hulk" },
+    { key: uuidv4(), name: "ironman" },
+    { key: uuidv4(), name: "moon" },
+    { key: uuidv4(), name: "naruto" },
+    { key: uuidv4(), name: "spawn" },
+    { key: uuidv4(), name: "spiderman" },
+    { key: uuidv4(), name: "vision" },
+    { key: uuidv4(), name: "yoda" },
   ];
 
   const [selectedItems, setSelectedItems] = useState([]);
@@ -43,8 +44,8 @@ const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
   };
   return (
     <div className="content">
-      {shuffle(items).map((item) => (
-        <img src={require(`./icons/${item}.png`)} />
+      {shuffle(items).map(({ key, name }) => (
+        <img key={key} src={require(`./icons/${name}.png`)} />
       ))}
     </div>
   );
