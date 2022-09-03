@@ -3,22 +3,22 @@ import { v4 as uuidv4 } from "uuid";
 
 const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
   let items = [
-    { key: uuidv4(), name: "batman" },
-    { key: uuidv4(), name: "black-panther" },
-    { key: uuidv4(), name: "daredevil" },
-    { key: uuidv4(), name: "deadpool" },
-    { key: uuidv4(), name: "dredd" },
-    { key: uuidv4(), name: "flash" },
-    { key: uuidv4(), name: "groot" },
-    { key: uuidv4(), name: "hellboy" },
-    { key: uuidv4(), name: "hulk" },
-    { key: uuidv4(), name: "ironman" },
-    { key: uuidv4(), name: "moon-knight" },
-    { key: uuidv4(), name: "naruto" },
-    { key: uuidv4(), name: "spawn" },
-    { key: uuidv4(), name: "spiderman" },
-    { key: uuidv4(), name: "vision" },
-    { key: uuidv4(), name: "yoda" },
+    "batman",
+    "black-panther",
+    "daredevil",
+    "deadpool",
+    "dredd",
+    "flash",
+    "groot",
+    "hellboy",
+    "hulk",
+    "ironman",
+    "moon-knight",
+    "naruto",
+    "spawn",
+    "spiderman",
+    "vision",
+    "yoda",
   ];
 
   const [selectedItems, setSelectedItems] = useState([]);
@@ -42,10 +42,23 @@ const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
 
     return arr;
   };
+
+  const processClick = (name) => {
+    const found = selectedItems.find((n) => n === name);
+    if (found === undefined) {
+      setSelectedItems([...selectedItems, name]);
+      updateCurrent(currentScore + 1);
+    }
+  };
+
   return (
     <div className="content">
-      {shuffle(items).map(({ key, name }) => (
-        <img key={key} src={require(`./icons/${name}.png`)} />
+      {shuffle(items).map((name, index) => (
+        <img
+          key={index}
+          onClick={processClick.bind(null, name)}
+          src={require(`./icons/${name}.png`)}
+        />
       ))}
     </div>
   );
