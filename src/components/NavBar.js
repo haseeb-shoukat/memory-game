@@ -11,3 +11,5 @@ const NavBar = ({ highScore, currentScore }) => {
     </div>
   );
 };
+
+export default NavBar;
