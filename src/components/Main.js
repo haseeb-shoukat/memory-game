@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Main = () => {
+const Main = ({ currentScore, highScore, updateCurrent, updateHigh }) => {
   let items = [
     "batman",
     "black-panther",
