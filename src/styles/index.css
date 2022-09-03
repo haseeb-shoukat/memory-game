@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #44403c;
 }
 
 code {
@@ -39,7 +40,6 @@ code {
 
 .content {
   padding: 60px 80px;
-  background-color: #44403c;
   grid-row: 2/ span 1;
   height: 100%;
   display: flex;
@@ -55,5 +55,60 @@ img {
 }
 
 img:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #d4d4d4;
+  height: 180px;
+  width: 450px;
+  border: 1px solid slategray;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px slategray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+  gap: 15px;
+}
+
+.end-heading {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.end-score {
+  font-size: 1.2rem;
+}
+
+.restart-btn {
+  padding: 8px 12px;
+  background-color: #44403c;
+  color: white;
+  border: 1px solid slategray;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.restart-btn:hover {
+  background-color: #3e3a37;
   cursor: pointer;
 }
